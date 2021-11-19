@@ -1,7 +1,7 @@
 <h1>Example Site!</h1>
 {% for author in authors %}
-  <h2>{{author.name}}</h2>
+  <a href="/author/{{author.id}}"><h2>{{author.name}}</h2></a>
   {% for book in author.book_set.all %}
-    <h3>{{book.title}}</h3>
+  <a href="/book/{{book.id}}"><h3>{{book.title}}</h3></a>
   {% endfor %}
 {% endfor %}
