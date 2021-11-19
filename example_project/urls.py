@@ -19,5 +19,7 @@ from example import views as example_views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('author/<int:author_id>', example_views.author_view),
+    path('book/<int:book_id>', example_views.book_view),
     path('', example_views.index_view),
 ]
