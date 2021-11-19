@@ -10,6 +10,7 @@ class Author(models.Model):
 class Book(models.Model):
     author = models.ForeignKey(Author, on_delete=models.CASCADE)
     title = models.CharField(max_length=64)
+    published = models.DateField(null=True)
 
     def __str__(self) -> str:
         return "%s: %s" % (self.author.name, self.title)

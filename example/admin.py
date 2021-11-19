@@ -9,6 +9,7 @@ class BookAdmin(admin.ModelAdmin):
     list_display = (
         "title",
         "author",
+        "published",
     )
 
 class BookInline(admin.TabularInline):
