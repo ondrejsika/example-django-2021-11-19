@@ -1,1 +1,7 @@
 <h1>Example Site!</h1>
+{% for author in authors %}
+  <h2>{{author.name}}</h2>
+  {% for book in author.book_set.all %}
+    <h3>{{book.title}}</h3>
+  {% endfor %}
+{% endfor %}
